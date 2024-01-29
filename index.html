@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./Resources/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+</head>
+<body>
+    <!--Offer heading-->
+    <div class="header">
+        <p>Save 20% off ticket prices by joining the Ornellion Cinema Club today!</p>
+    </div>
+    <!--Title-->
+    <div class="title">
+        <h1>Sign up to Ornellion Cinema</h1>
+        <p>Don't delay! Sign up to start saving today</p>
+    </div>
+    <!--Form-->
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <!--User Account Information-->
+        <fieldset>
+            <!--Email address-->
+            <label for="email">Email: <input type="email" id="email" required name="user-email"></label>
+            <!--Password:requires 8 or more lowercase letters or digits 0 to 5-->
+            <label for="new-password">Password: <input type="password" id="new-password" required pattern="[a-z0-9]{8,}" name="user-password"></label>
+            <!--First Name-->
+            <label for="first-name" class="side-by-side">First Name: <input type="text" id="first-name" required name="user-firstname"></label>
+            <!--Last Name-->
+            <label for="last-name" class="side-by-side">Last Name: <input type="text" id="last-name" required name="user-lastname">
+            </label>
+            <!--Age-->
+            <label for="age">Input your age (years): <input type="number" min="13" max="120" id="age" name="user-age"></label>
+            <!--Primary Cinema Location-->
+            <label for="location">Primary Cinema Location (optional)
+                <select id="location" name="primary-location">
+                    <option value="">Select your primary cinema location</option>
+                    <option value="1">London</option>
+                    <option value="2">Manchester</option>
+                    <option value="3">Newcastle</option>
+                    <option value="4">Liverpool</option>
+                </select>
+            </label>
+        </fieldset>
+        
+        <!--The type of subscription: Personal or Business-->
+        <fieldset>
+            <legend>Subscription Type (required)</legend>
+            <label for="monthly-subscription"><input type="radio" name="subscription-type" checked id="monthly-subscription" class="inline"> Monthly</label>
+            <label for="yearly-subscription"><input type="radio" name="subscription-type" id="yearly-subscription" class="inline"> Yearly</label>
+        </fieldset>
+
+        <!--Profile picture, age, how did you hear about us, bio-->
+        <fieldset>
+            <legend>Member Profile (optional)</legend>
+            <label for="profile-picture">Upload a profile picture: <input type="file" id="profile-picture" name="profile"></label>
+            <label for="bio">Tell us a little bit about you:
+                <textarea id="bio" rows="3" cols="30" placeholder="My favourite cinema snack is sweet and salty popcorn..." name="user-bio"></textarea>
+            </label>
+        </fieldset>
+
+        <!--Confirm Terms & Conditions-->
+        <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions" name="terms" class="inline">I confirm I've read and understood the <a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a></label>
+
+        <!--Submit Button-->
+        <input type="submit" value="Submit">
+</form>
+    
+</body>
+</html>
